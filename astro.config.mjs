@@ -6,13 +6,10 @@ import remarkAdmonitions from 'remark-admonitions';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://example.com',
-	integrations: [mdx({
+	integrations: [mdx(), sitemap()],
+	markdownOptions: {
 		remarkPlugins: [
-		  remarkUnwrapImages
-		]
-	  }), sitemap()],
-	  markdownOptions: {
-		remarkPlugins: [
+			remarkUnwrapImages,
 		  remarkAdmonitions,
 		  // ...other plugins
 		],
