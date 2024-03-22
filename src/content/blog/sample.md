@@ -30,4 +30,13 @@ This is Deter admonition.
 
 :::assert
 This is Assert admonition.
+
+```sh
+npm create astro@latest -- --template starlight
+```
+:::
+<br/>
+
+:::clas
+This is idea admonition.
 :::
