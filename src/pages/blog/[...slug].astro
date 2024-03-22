@@ -3,7 +3,7 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 import '@microflash/remark-callout-directives/theme/vitepress';
-
+// import '../../styles/global.css'
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	return posts.map((post) => ({

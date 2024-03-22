@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import '../styles/markdown.css'
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -76,8 +77,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<h1>{title}</h1>
 						<hr />
 					</div>
-					<slot />
+					<div >
+						<slot />
+					</div>
+					<div class="sl-markdown-content"><slot /></div>
 				</div>
+
 			</article>
 		</main>
 		<Footer />
