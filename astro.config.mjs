@@ -23,7 +23,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import remarkDirective from 'remark-directive';
 import remarkCalloutDirectives from '@microflash/remark-callout-directives';
-
+import remarkRehype from 'remark-rehype'
 // https://astro.build/config
 export default defineConfig({
     site: 'https://example.com',
@@ -31,8 +31,9 @@ export default defineConfig({
     markdown: {
         remarkPlugins: [
             remarkDirective,
-            remarkCalloutDirectives,
+            // remarkCalloutDirectives,
             // ...other plugins
+            remarkRehype
         ],
     },
 });
